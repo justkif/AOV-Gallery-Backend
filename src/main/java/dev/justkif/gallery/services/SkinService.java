@@ -13,10 +13,4 @@ public class SkinService {
         this.skinRepository = skinRepository;
     }
 
-    public String getThumbnail(Integer defaultSkinId) {
-        return skinRepository.findById(defaultSkinId)
-            .map(skin -> skin.thumbnail_link())
-            .orElse(null);
-    }
-
 }
